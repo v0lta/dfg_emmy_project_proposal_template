@@ -1,6 +1,8 @@
 ## DFG Emmy Noether Proposal Template based on the 2025 rtf.
 
-Please refer to the DFG website for additional and up-to date information.
+Please take a look at the DFG website for additional and up-to-date information.
+
+Run `make` to get the typesetting done. 
 
 ### See also
 
