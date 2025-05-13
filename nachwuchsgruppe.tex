@@ -1,0 +1,366 @@
+\documentclass[11pt]{article} %11pt
+
+\usepackage{titlesec}
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+
+\linespread{1.2}
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ hoffset=0.0cm,
+ voffset=0.0cm,
+ lines=57
+}
+\setcounter{secnumdepth}{4}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage[hidelinks]{hyperref} % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{xcolor}         % colors
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage[export]{adjustbox}
+\usepackage{mathdots}
+\usepackage{enumitem}
+\usepackage{eurosym}
+\usepackage{csquotes} % the enquote command.
+%\usepackage{etoc}
+\usepackage{pgfgantt}
+
+\usepackage[mode=buildmissing]{standalone}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepgfplotslibrary{groupplots,dateplot}
+\pgfplotsset{compat=newest}
+
+\usepackage{comment}
+
+\definecolor{tabBlue}{HTML}{1f77b4}
+\definecolor{tabOrange}{HTML}{ff7f0e}
+\definecolor{tabGreen}{HTML}{2ca02c}
+\definecolor{tabRed}{HTML}{d62728}
+\definecolor{tabPurple}{HTML}{9467bd}
+\definecolor{tabBrown}{HTML}{8c564b}
+\definecolor{tabPink}{HTML}{e377c2}
+\definecolor{tabGray}{HTML}{7f7f7f}
+\definecolor{tabOlive}{HTML}{bcbd22}
+\definecolor{tabCyan}{HTML}{17becf}
+
+\newcommand{\MW}[1]{{\color{tabGreen} {\bf (MW: #1)}}}
+\newcommand{\HVh}[1]{{\color{tabBlue} {\bf (HVh: #1)}}}
+\newcommand{\LV}[1]{{\color{tabOlive} {\bf (LV: #1)}}}
+
+\usepackage{acro}
+\acsetup{make-links=false} % cite/cmd=\cite 
+% Define your acronyms here
+\DeclareAcronym{gan}{
+  short = GAN,
+  long = Generative Adversarial Neural Network,
+}
+
+
+\PassOptionsToPackage{%
+  backend=biber,bibencoding=utf8, %instead of bibtex
+  % backend=bibtex8,bibencoding=ascii,%
+  language=auto,%
+  style=numeric-comp,%
+  %style=authoryear-comp, % Author 1999, 2010
+  %bibstyle=authoryear,dashed=false, % dashed: substitute rep. author with ---
+  style=alphabetic,
+  sorting=nyt, % name, year, title
+  maxbibnames=10, % default: 3, et al.
+  %backref=true,%
+  %natbib=true % natbib compatibility mode (\citep and \citet still work)
+}{biblatex}
+\usepackage{biblatex}
+
+\addbibresource{bib.bib}
+
+
+\begin{document}
+
+\date{$\;$}
+ 
+%\maketitle
+
+\noindent \textbf{Project Description – Emmy Noether Programme}
+$\;$\\
+$\;$\\
+\noindent \textbf{First name  last name, city} \\
+$\;$ \\
+\noindent \textbf{Project title} \\
+\noindent\rule{\textwidth}{1pt}
+
+% Size limitations:
+% \textit{Sections 1-3 must not exceed 17 pages in total.}
+% \textit{Section 4 et seq. must not exceed 8 pages.}
+% \textit{Overall page limit 25 pages.}}
+
+% \textit{Review instructions:
+%   \url{https://www.dfg.de/resource/blob/167438/db79d049c82f2d7e28ad032bb291898c/10-210-en-data.pdf}}
+
+% \textit{Grant writing instructions:
+%  Writing instructions: \url{https://www.dfg.de/resource/blob/168314/9c1a931f2b58c0ec2ccfa7023fb687c7/54-01-en-data.pdf}
+  
+% \textit{ Formalities: 
+% \url{https://www.dfg.de/resource/blob/168076/8148c508cc528aa227947c092d645046/50-02-en-data.pdf}}. } \\
+
+
+\section*{Project Description}
+\textit{Sections 1-3 must not exceed 17 pages in total.}
+
+
+\section{Starting Point}
+\subsection{State of the art and preliminary work}
+[Text \cite{Applicant2018Advances}, \cite{wilkinson2016fair}] 
+
+\textit{State of the art and preliminary work. For new proposals please explain briefly and precisely the state of the art in your field in its direct relationship to your project. This description should make clear in which context you situate your own research and in what areas you intend to make a unique, innovative, promising contribution. Indicate the current state of your preliminary work. This description must be concise and understandable without referring to additional literature.}
+
+\section{Objectives and work programme}
+
+\subsection{ Anticipated total duration of the project }
+
+[Text]
+
+
+\subsection{ Objectives }
+\textit{Please give a concise description of your project’s research programme and scientific
+objectives. Please indicate if you anticipate results that may be relevant to fields other than science (such as science policy, technology, the economy or society).}
+
+
+\subsection{ Work programme incl. proposed research methods }
+\begin{figure}
+  \centering
+  \begin{ganttchart}{1}{24}
+  \gantttitle{Planned work per quarter}{24} \\
+  \gantttitlelist{1,...,24}{1} \\
+  
+  \ganttbar{Task 1}{1}{2} \\
+  \ganttmilestone{Milestone 1}{2} \ganttnewline
+  \ganttlink{elem0}{elem1}
+  \ganttbar{Task2}{3}{7} \\
+  \ganttlink{elem1}{elem2}
+  \ganttbar{Task 3}{5}{8} \\
+  \ganttlink{elem2}{elem3}
+  \end{ganttchart}
+  
+  \caption{A chart outlining the time allocated for each sub-project.}
+  \label{fig:Gantt}
+  \end{figure}
+
+[Text]
+
+
+\subsection{ Handling of research data}\label{sec:data}
+
+
+\subsection{Relevance of sex, gender and/or diversity}
+[Text]
+
+
+\subsection{Justification for the choice of host institution(s)}
+\textit{Please justify the choice of each proposed host institution.}
+
+[Text]
+
+
+\section{ Project- and subject-related list of publications }
+\textit{ Works cited from sections 1 and 2, both by the applicant and by third parties. Please include DOI/URL if available. A maximum of ten of your own works cited may be highlighted; font at least Arial 9 pt. }
+
+\renewcommand*{\bibfont}{\normalfont\footnotesize}
+\noindent \textbf{Selected related work with applicant participation}
+\printbibliography[heading=none,keyword={applicant}]
+
+
+\noindent \textbf{Related work}
+\printbibliography[heading=none,notkeyword={applicant}]
+
+
+\newpage
+
+\section{ Supplementary information on the research context }
+\textit{Section 4 et seq. must not exceed 8 pages.}
+
+\subsection{ Ethical and/or legal aspects of the project }
+
+\subsubsection{ General ethical aspects }
+
+[Text]
+
+\subsubsection{ Descriptions of proposed investigations involving humans, human materials or identifiable data }
+
+[Text]
+
+\subsubsection{ Descriptions of proposed investigations involving experiments on animals }
+
+[Text]
+
+\subsubsection{Descriptions of projects involving genetic resources (or associated traditional knowledge) from a foreign country }
+
+[Text]
+
+\subsubsection{ Explanations regarding any possible safety-related aspects }
+
+\paragraph{ “Dual Use Research of Concern”; foreign trade law }
+
+[Text]
+
+\paragraph{Risks in international cooperation}
+
+[Text]
+
+\subsubsection{  Considerations on aspects of ecological sustainability in the planning and implementation of the project }
+
+[Text]
+
+\subsection{ Employment status information }
+\textit{Last name, first name, and employment status (including duration of contract and funding body, if on a fixed-term contract)}
+
+[Text]
+
+
+\subsection{ Composition of the project group }
+\textit{List only those individuals who will work on the project but will not be paid out of the project funds. State each person’s name, academic title, employment status, and type of funding.}
+
+[Text]
+
+\subsection{  Researchers in Germany with whom you have agreed to cooperate on this project }\label{sec:partners_ger}
+
+[Text]
+
+\subsection{  Researchers abroad with whom you have agreed to cooperate on this project }\label{sec:partners_int}
+
+[Text]
+
+
+\subsection{  Researchers with whom you have collaborated scientifically within the past three years. This information will help avoid potential conflicts of interest. }
+
+[Text]
+
+
+\subsection{  Project-relevant cooperation with commercial enterprises }
+\textit{If applicable, please note the EU guidelines on state aid or contact your research institution in this regard.}
+ 
+[Text]
+
+\subsection{  Project-relevant participation in commercial enterprises }
+\textit{Information on connections between the project and the production branch of the enterprise}
+
+[Text]
+
+\subsection{  Scientific equipment }
+\textit{List larger instruments that will be available to you for the project. These may include large computer facilities if computing capacity will be needed. }
+
+
+
+\subsection{  Other submissions }\label{sec:other_submissions}
+\textit{List any funding proposals for this project and/or major instrumentation previously submitted to a third party. }
+
+[text]
+
+\subsection{  Other Information }
+\textit{Please use this section for any additional information you feel is relevant which has not been provided elsewhere.}
+
+[Text]
+
+\section{Requested modules/funds}
+\textit{Explain each item (stating last name, first name)}
+
+[Text]
+
+
+\subsection{Module Junior Research Group Leader}
+\textit{Use this module to request funding for your position as project leader under the Emmy Noether Programme.}
+\textit{Clinician scientists may apply for a temporary substitute position instead of a position as Emmy Noether Group Leader. The relevant module can be found on the list of modules.}
+\subsection{Basic Module}
+
+\subsubsection{ Funding for Staff }
+
+[Text]
+
+\subsubsection{  Direct Project Costs }
+
+[Text]
+
+\paragraph{Equipment up to € 10,000, Software and Consumables}
+
+[Text]
+
+\paragraph{Travel Expenses}
+
+[Text]
+
+\paragraph{Visiting Researchers (excluding Mercator Fellows)}
+
+[Text]
+
+\paragraph{Expenses for Laboratory Animals}
+
+[Text]
+
+\paragraph{Other Costs}
+
+[Text]
+
+\paragraph{Project-related Publication Expenses} 
+
+[Text]
+
+\subsubsection{Instrumentation}
+
+\paragraph{Equipment exceeding \euro 10,000}
+
+[Text]
+
+\paragraph{ Major Instrumentation exceeding \euro 50,000 }
+
+[Text]
+
+\subsection{ Module Temporary Clinician Substitute}
+\textit{Clinician scientists may apply for a temporary substitute position instead of a position as junior research group leader. In addition, this module may be used to finance substitute medical personnel who will assume the patient-care responsibilities of the clinicians participating in your project.}
+
+[Text]
+
+\subsection{ Module Mercator Fellows }
+
+[Text]
+
+\subsection{ Module Workshop Funding }
+
+[Text]
+
+\subsection{ Module Public Relations Funding }
+
+[Text]
+
+\subsection{ Module Standard Allowance for Gender Equality Measures }
+
+[Text]
+
+\subsection{ Module Family Allowance }
+
+[Text]
+
+\end{document}
