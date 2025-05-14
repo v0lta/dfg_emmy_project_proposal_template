@@ -4,7 +4,7 @@ Please take a look at the DFG website for additional and up-to-date information.
 
 Run `make` to get the typesetting done. 
 
-This template is an updated version of Johannes Kösters work.
+This template is an updated version of Johannes Köster's work.
 
 ### See also
 
