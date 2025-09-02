@@ -1,0 +1,44 @@
+name: tex_to_pdf
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Install dependencies
+      run: |
+            sudo apt-get update -y \
+
+            # Install the full version 
+            # sudo apt-get install texlive-full -y
+            # or only your required latex packages 
+            sudo apt install -y \
+                texlive-base \
+                texlive-latex-base \
+                texlive-latex-recommended \
+                texlive-latex-extra \
+                texlive-fonts-recommended \
+                latexmk \
+                lmodern
+                build-essential
+
+    - name: Generate pdfs 
+      run: make
+            
+    - name: Commit and push PDFs
+      run: |
+            git config --global user.name 'GitHub Actions'
+            git config --global user.email 'actions@github.com'
+            git add build/*.pdf
+            git commit -m "Update generated PDFs" || echo "No changes to commit"
+            git push
+

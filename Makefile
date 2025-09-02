@@ -1,6 +1,6 @@
 .PHONY : all latex bibtex view nonstop clean distclean
 
-TARGET=nachwuchsgruppe
+TARGET=antrag
 SOURCE=$(TARGET).tex
 BUILD=build
 NONSTOP=-interaction nonstopmode -halt-on-error -file-line-error
