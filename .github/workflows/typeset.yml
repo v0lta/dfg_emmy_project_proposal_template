@@ -29,6 +29,7 @@ jobs:
                 texlive-fonts-recommended \
                 latexmk \
                 lmodern \
+                texlive-bibtex-extra \
                 build-essential
 
     - name: Generate pdfs 
